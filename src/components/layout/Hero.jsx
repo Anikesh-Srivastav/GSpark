@@ -95,7 +95,7 @@ function Hero() {
 
 
             <div id='video-frame' className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'>
-                {/* All videos are preloaded in background but only current is shown */}
+              
                 {Array.from({ length: totalVideos }).map((_, i) => {
                     const index = i + 1;
                     return (
@@ -112,7 +112,7 @@ function Hero() {
                     );
                 })}
 
-                {/* Mini mask preview */}
+              
                 <div className='mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg'>
                     <div onClick={handleMiniClicks} className='origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100'>
                         <video
@@ -127,7 +127,7 @@ function Hero() {
                     </div>
                 </div>
 
-                {/* Animated expanding video */}
+              
                 <video
                     ref={nextVideoRef}
                     src={getVideoSrc(currentIndex)}
@@ -138,7 +138,7 @@ function Hero() {
                     onLoadedData={handleVideoLoad}
                 />
 
-                {/* Hero text content */}
+             
                 <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
           G<b>A</b>MING
         </h1>
@@ -162,7 +162,7 @@ function Hero() {
                 </div>
             </div>
 
-            {/* duplicate text */}
+    
             <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
         G<b>A</b>MING
       </h1>
